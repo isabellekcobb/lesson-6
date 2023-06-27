@@ -1,5 +1,4 @@
 name: Simulation
-
 on:
   push:
     branches: [ main, develop ]
