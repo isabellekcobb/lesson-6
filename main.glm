@@ -17,10 +17,10 @@ object climate
 }
 
 // Task 2 - Get historical weather data for Seattle, WA
-#ifmissing "historical.glm"
-#python -m nsrdb_weather -y=2020 -p=47.680,-122.250 -g=historical.glm
-#endif
-#include "historical.glm"
+//#ifmissing "historical.glm"
+//#python -m nsrdb_weather -y=2020 -p=47.680,-122.250 -g=historical.glm
+//#endif
+//#include "historical.glm"
 
 // Task 3 - Get realtime weather data for Seattle, WA (Boeing Airport Field)
 #python -m metar2glm -c realtime KBFI >realtime.glm
