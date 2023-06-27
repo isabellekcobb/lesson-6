@@ -16,7 +16,7 @@ jobs:
 
     - name: Get NSRDB credentials
       env:
-        NSRDB_CREDENTIAL: ${{ secrets.NSRDB_CREDENTIAL }}
+        NSRDB_CREDENTIAL: ${{ 9zS25U1TomaV3vQzgiAexB8eVaNV02HrrcmtBm0q  }}
       run: |
         mkdir -p $HOME/.nsrdb
         echo $NSRDB_CREDENTIAL > $HOME/.nsrdb/credentials.json
