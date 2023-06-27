@@ -18,8 +18,7 @@ object climate
 
 // Task 2 - Get historical weather data for Seattle, WA
 #ifmissing "historical.glm"
-//#python -m nsrdb_weather -y=2020 -p=47.680,-122.250 -g=historical.glm
-#python -m nsrdb_weather -y=2020 -p=37.5,-122.4 -g=historical.glm
+#python -m nsrdb_weather -y=2020 -p=47.680,-122.250 -g=historical.glm
 #endif
 #include "historical.glm"
 
