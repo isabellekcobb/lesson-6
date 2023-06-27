@@ -16,18 +16,18 @@ object climate
     reader sample;
 }
 
-// Task 2 - Get historical weather data
+// Task 2 - Get historical weather data for Seattle, WA
 #ifmissing "historical.glm"
-#python -m nsrdb_weather -y=2020 -p=37.5,-122.4 -g=historical.glm
+#python -m nsrdb_weather -y=2020 -p=47.680,-122.250 -g=historical.glm
 #endif
 #include "historical.glm"
 
-// Task 3 - Get realtime weather data
-#python -m metar2glm -c realtime KSFO >realtime.glm
+// Task 3 - Get realtime weather data for Seattle, WA (Boeing Airport Field)
+#python -m metar2glm -c realtime KBFI >realtime.glm
 #include "realtime.glm"
 
-// Task 4 - Get forecast weather data
-#python -m noaa_forecast -p=37.5,-122.4 -c=forecast.csv -n=forecast -g=forecast.glm
+// Task 4 - Get forecast weather data for Seattle, WA
+#python -m noaa_forecast -p=47.680,-122.250 -c=forecast.csv -n=forecast -g=forecast.glm
 #include "forecast.glm"
 clock
 {
