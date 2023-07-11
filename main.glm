@@ -18,7 +18,7 @@ object climate
 
 // Task 2 - Get historical weather data for Concord, NH
 #ifmissing "historical.glm"
-#python -m nsrdb_weather -y=2020 -p=43.200,-71.500 -g=historical.glm
+#python -m nsrdb_weather -y=1985 -p=43.200,-71.500 -g=historical.glm
 #endif
 #include "historical.glm"
 
